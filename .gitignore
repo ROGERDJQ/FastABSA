@@ -1,0 +1,25 @@
+led / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+
