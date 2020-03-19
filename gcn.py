@@ -3,6 +3,7 @@ import pretty_errors
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from torch.autograd import Variable
 
 import fastNLP
 from fastNLP import (SGD, AccuracyMetric, Adam, CrossEntropyLoss, DataSet,
@@ -11,7 +12,7 @@ from fastNLP.core.callback import FitlogCallback
 from fastNLP.core.metrics import MetricBase
 from fastNLP.embeddings import StaticEmbedding
 from fastNLP.modules import LSTM,MLP
-
+from tree import *
 class GCNClassifier(nn.Module):
     def __init__(self, args, emb_matrix):
         super().__init__()
@@ -136,7 +137,7 @@ class GCN(nn.Module):
         embs = self.in_drop(embs)
 
         # rnn
-        total_layers = args.rnn_layers * 2 if args.bidirect else args.rnn_layers
+        total_layers = self.args.rnn_layers * 2 if self.args.bidirect else self.args.rnn_layers
         h0 = c0 = Variable(
             torch.zeros([total_layers, tok.size()[0], self.args.rnn_hidden]),
             requires_grad=False,
