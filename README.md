@@ -6,7 +6,7 @@
 代码为Aspect-Level Sentiment Analysis Via Convolution over Dependency Tree(CDT)的[fastNLP](https://github.com/fastnlp/fastNLP)实现，基于论文[Aspect-Level Sentiment Analysis Via Convolution over Dependency Tree](https://www.aclweb.org/anthology/D19-1569/)。文章结合lstm与GCN，利用Dependency Tree的结构信息，提高了在Aspect-Term Sentiment Analysis 任务上的结果。原始实现代码在[CDT_ABSA](https://github.com/sunkaikai/CDT_ABSA)。
 
 ## Requirements
-   - [fastNLP](https://github.com/fastnlp/fastNLP) 
+   - [fastNLP 0.5.0](https://github.com/fastnlp/fastNLP) 
    - [fitlog](https://github.com/fastnlp/fitlog)
    - PyTorch
 
