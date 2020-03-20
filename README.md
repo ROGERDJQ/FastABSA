@@ -67,8 +67,8 @@ python fast_gcn.py --data_dir your/data/dir/ --glove_dir your/glove/dir
    </tr>
    <tr>
       <td>本代码</td>
-      <td>82.93</td>
-      <td>74.60</td>
+      <td>82.66</td>
+      <td>74.11</td>
       <td>77.06</td>
       <td>73.27</td>
       <td>74.29</td>
