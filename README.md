@@ -11,6 +11,7 @@
    - PyTorch
 
 ## Run
+> 运行前建议安装并使用fitlog初始化文件夹，否则fast_gcn代码文件中的fitlog*语句可能会报错
 ### 数据准备
 - 接受的数据格式为json，结构如：
 ```json
