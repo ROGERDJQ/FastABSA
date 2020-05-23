@@ -4,6 +4,7 @@ import os
 import random
 
 import fitlog
+fitlog.debug()
 import numpy as np
 import pretty_errors
 import torch

@@ -11,7 +11,8 @@
    - PyTorch
 
 ## Run
-> 运行前建议安装并使用fitlog初始化文件夹，否则fast_gcn代码文件中的fitlog*语句可能会报错
+> 我们建议运行前安装并使用fitlog，初始化文件夹后运行代码，否则fast_gcn代码文件中的fitlog.*语句可能会报错
+> 如果在调试时希望不运行fitlog相关代码，请保留入口处的 fitlog.debug()
 ### 数据准备
 - 接受的数据格式为json，结构如：
 ```json
