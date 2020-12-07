@@ -2,7 +2,7 @@
  * @Author: Roger
  * @Date: 2020-12-03 01:40:29
  * @LastEditors: Roger
- * @LastEditTime: 2020-12-07 12:52:08
+ * @LastEditTime: 2020-12-07 13:35:30
  * @Description: file content
 -->
 # 基于fastNLP的Aspect-Level Sentiment Analysis实践 
@@ -10,7 +10,7 @@
 
 ## 介绍
 
-代码为Aspect-Level Sentiment Analysis Via Convolution over Dependency Tree(CDT)的[fastNLP](https://github.com/fastnlp/fastNLP)实现，基于论文[Aspect-Level Sentiment Analysis Via Convolution over Dependency Tree](https://www.aclweb.org/anthology/D19-1569/)。文章结合lstm与GCN，利用Dependency Tree的结构信息，提高了在Aspect-Term Sentiment Analysis 任务上的结果。原始实现代码在[CDT_ABSA](https://github.com/sunkaikai/CDT_ABSA)。
+代码为Aspect-Level Sentiment Analysis Via Convolution over Dependency Tree(CDT)的[fastNLP](https://github.com/fastnlp/fastNLP)实现，基于论文[Aspect-Level Sentiment Analysis Via Convolution over Dependency Tree](https://www.aclweb.org/anthology/D19-1569/)。文章结合lstm与GCN，利用Dependency Tree的结构信息，提高了在Aspect-Term Sentiment Analysis 任务上的结果。
 
 ## Requirements
    - [fastNLP 0.5.0](https://github.com/fastnlp/fastNLP) 
@@ -34,7 +34,7 @@
         "to": 2,
         "polarity": "positive"}]}
 ```
-- 训练需要加载GloVe vectors [glove.840B.300d.zip](https://nlp.stanford.edu/projects/glove/)。fastNLP会自动加载常用的Glove 权重。
+- 训练需要加载GloVe vectors [glove.840B.300d.zip](https://nlp.stanford.edu/projects/glove/)。fastNLP会自动加载常用的Glove 。
 ### 训练
 训练模型，运行：
 ```python
@@ -92,7 +92,7 @@ python train.py --data_dir your/data/dir/
 </table>
 
 ## Disclaimer
-建图时tree代码为原代码中实现，处理后数据文件与参数与原repo中结构相同，见[CDT_ABSA](https://github.com/sunkaikai/CDT_ABSA)。
+建图时tree代码为原代码中实现，处理后数据文件与参数与原repo中结构相同。
 
 ## TODO
 
