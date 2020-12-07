@@ -1,3 +1,10 @@
+<!--
+ * @Author: Roger
+ * @Date: 2020-12-03 01:40:29
+ * @LastEditors: Roger
+ * @LastEditTime: 2020-12-07 12:52:08
+ * @Description: file content
+-->
 # 基于fastNLP的Aspect-Level Sentiment Analysis实践 
 
 
@@ -10,9 +17,10 @@
    - [fitlog](https://github.com/fastnlp/fitlog)
    - PyTorch
 
-## Run
-> 我们建议运行前安装并使用fitlog，初始化文件夹后运行代码，否则fast_gcn代码文件中的fitlog.*语句可能会报错
-> 如果在调试时希望不运行fitlog相关代码，请保留入口处的 fitlog.debug()
+## Note
+- > 我们建议运行前安装并使用fitlog，使用 命令行fitlog init xxx初始化文件夹后运行代码，否则代码文件中的fitlog.*语句可能会报错
+- > 如果在调试时希望不运行fitlog相关代码，请保留入口处的 fitlog.debug()
+- >已经将原CDT的数据集放在内部的dataset文件夹内，可在复现时使用。外部的Dataset内的数据使用了不同的预处理方法，在具体数据上可能与dataset内数据有诸多不同。
 ### 数据准备
 - 接受的数据格式为json，结构如：
 ```json
@@ -26,16 +34,16 @@
         "to": 2,
         "polarity": "positive"}]}
 ```
-- 训练需要加载GloVe vectors [glove.840B.300d.zip](https://nlp.stanford.edu/projects/glove/),加载后，将位置赋给参数`glove_dir`，具体参看代码内说明。
+- 训练需要加载GloVe vectors [glove.840B.300d.zip](https://nlp.stanford.edu/projects/glove/)。fastNLP会自动加载常用的Glove 权重。
 ### 训练
 训练模型，运行：
 ```python
-python fast_gcn.py --data_dir your/data/dir/ --glove_dir your/glove/dir
+python train.py --data_dir your/data/dir/ 
 ```
 更多的参数设置参看代码内说明。
 训练模型将会保存在`save_dir`。
 ## 结果
-原论文共实验了四个数据集。在训练时也分别进行了实验。
+原论文共实验了四个数据集。在训练时分别进行了实验。
 
 <table>
    <tr>

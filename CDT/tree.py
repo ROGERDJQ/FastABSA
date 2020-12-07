@@ -1,11 +1,16 @@
+'''
+Author: Roger
+Date: 2020-12-07 13:11:22
+LastEditors: Roger
+LastEditTime: 2020-12-07 13:15:46
+Description: tree constracting
+'''
 """
 Basic operations on trees.
 """
 
 import numpy as np
-from collections import defaultdict
 
-import copy
 
 class Tree(object):
     """
