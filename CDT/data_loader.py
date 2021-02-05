@@ -1,8 +1,8 @@
 '''
 Author: Roger
 Date: 2020-12-01 00:14:02
-LastEditors: Roger
-LastEditTime: 2020-12-07 13:17:49
+LastEditors  : Roger
+LastEditTime : 2021-02-05 10:42:49
 Description: data_loader. Specifically, ABSALoader can convert formatted file into databundle in fastNLP. 
             CDTPipe is designed for CDT reproducation.
 '''
@@ -12,16 +12,17 @@ from fastNLP.io.pipe.utils import _add_words_field, _indexize
 from fastNLP.io.utils import check_loader_paths
 import json
 
-class ABSALoader(Loader):
+class CDTLoader(Loader):
     '''
-    description: Load absa data from formatted file. 
-                Note that the formatted file is already preprocessed from original raw data,
+    description: Load absa data from data file. 
+                Note that the data file is already preprocessed from original raw data,
                 which would be released in the future. 
     '''
     def __init__(self):
         super().__init__()
 
     def _load(self, path, is_lower=True):
+        # 
         with open(path, "r", encoding="utf8") as f:
             raw_data = json.load(f)
         data = []
@@ -93,8 +94,5 @@ class CDTPipe(Pipe):
         return data_bundle
 
     def process_from_file(self, paths) -> DataBundle:
-        data_bundle = ABSALoader().load(paths, is_lower=self.is_lower)
+        data_bundle = CDTLoader().load(paths, is_lower=self.is_lower)
         return self.process(data_bundle)
-
-
-

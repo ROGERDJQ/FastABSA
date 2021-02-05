@@ -1,9 +1,9 @@
 '''
 Author: Roger
 Date: 2020-12-07 13:11:22
-LastEditors: Roger
-LastEditTime: 2020-12-07 13:15:46
-Description: tree constracting
+LastEditors  : Roger
+LastEditTime : 2021-02-05 10:41:31
+Description: tree constracting, from the original code.
 '''
 """
 Basic operations on trees.
@@ -102,4 +102,3 @@ def tree_to_adj(sent_len, tree, directed=False, self_loop=True):
             ret[i, i] = 1
 
     return ret
-

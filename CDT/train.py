@@ -1,8 +1,8 @@
 '''
 Author: Roger
 Date: 2020-11-30 12:24:37
-LastEditors: Roger
-LastEditTime: 2020-12-07 13:18:25
+LastEditors  : Roger
+LastEditTime : 2021-02-05 10:44:41
 Description: CDT train
 '''
 import argparse
@@ -17,7 +17,7 @@ from sklearn import metrics as m
 from torch.utils.tensorboard import SummaryWriter
 
 from cdt_model import GCNClassifier
-from preprocessing import CDTPipe
+from data_loader import CDTPipe
 from tree import *
 
 # fitlog.debug()
@@ -25,8 +25,7 @@ fitlog.commit(__file__)  # auto commit your codes
 fitlog.set_log_dir("./logs")
 
 parse = argparse.ArgumentParser()
-parse.add_argument("--data_dir", type=str,
-                   default="/remote-home/jqdai/alsc/FastALSC/CDT/dataset/Laptop")
+parse.add_argument("--data_dir", type=str)
 parse.add_argument("--tok_dim",
                    type=int,
                    default=300,
@@ -87,7 +86,7 @@ parse.add_argument("--batch_size",
 parse.add_argument(
     "--save_dir",
     type=str,
-    default="./fast_saved_models",
+    default="./save_models",
     help="Root dir for saving models.",
 )
 args = parse.parse_args()

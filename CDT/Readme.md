@@ -1,8 +1,8 @@
 <!--
  * @Author: Roger
  * @Date: 2020-12-03 01:40:29
- * @LastEditors: Roger
- * @LastEditTime: 2020-12-07 13:35:30
+ * @LastEditors  : Roger
+ * @LastEditTime : 2021-02-05 10:40:05
  * @Description: file content
 -->
 # 基于fastNLP的Aspect-Level Sentiment Analysis实践 
@@ -10,7 +10,7 @@
 
 ## 介绍
 
-代码为Aspect-Level Sentiment Analysis Via Convolution over Dependency Tree(CDT)的[fastNLP](https://github.com/fastnlp/fastNLP)实现，基于论文[Aspect-Level Sentiment Analysis Via Convolution over Dependency Tree](https://www.aclweb.org/anthology/D19-1569/)。文章结合lstm与GCN，利用Dependency Tree的结构信息，提高了在Aspect-Term Sentiment Analysis 任务上的结果。
+代码为Aspect-Level Sentiment Analysis Via Convolution over Dependency Tree(CDT)的[fastNLP](https://github.com/fastnlp/fastNLP)实现，基于论文[Aspect-Level Sentiment Analysis Via Convolution over Dependency Tree](https://www.aclweb.org/anthology/D19-1569/)。文章结合lstm与GCN，利用Dependency Tree的结构信息，提高了在Aspect-level Sentiment Analysis 任务上的结果。
 
 ## Requirements
    - [fastNLP 0.5.0](https://github.com/fastnlp/fastNLP) 
@@ -20,7 +20,7 @@
 ## Note
 - > 我们建议运行前安装并使用fitlog，使用 命令行fitlog init xxx初始化文件夹后运行代码，否则代码文件中的fitlog.*语句可能会报错
 - > 如果在调试时希望不运行fitlog相关代码，请保留入口处的 fitlog.debug()
-- >已经将原CDT的数据集放在内部的dataset文件夹内，可在复现时使用。外部的Dataset内的数据使用了不同的预处理方法，在具体数据上可能与dataset内数据有诸多不同。
+- >原CDT的数据集放在CDT/dataset文件夹内，可在复现原论文时使用。外部的Dataset内的数据使用了不同的预处理方法，在具体数据上可能与每个模型内部的dataset有诸多不同。
 ### 数据准备
 - 接受的数据格式为json，结构如：
 ```json
